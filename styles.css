@@ -1,0 +1,36 @@
+/* styles.css - minimal modern styling */
+:root{
+  --bg:#f6f9fc;
+  --card:#ffffff;
+  --accent:#0b5bd7;
+  --muted:#64748b;
+  --maxw:1000px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a; -webkit-font-smoothing:antialiased}
+.container{max-width:var(--maxw); margin:0 auto; padding:24px}
+.site-header{background:linear-gradient(90deg, #0b5bd7 0%, #0a66d1 100%); color:white}
+.header-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 24px}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:white}
+.logo{width:48px; height:48px}
+.brand-name{font-weight:700; font-size:18px}
+.nav a{color:white; text-decoration:none; margin-left:12px; padding:8px 12px; border-radius:8px; font-weight:600}
+.btn-primary{background:white; color:var(--accent); padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:700}
+.btn-whatsapp{background:#25D366; color:white; padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:700}
+.main{padding:40px 24px}
+.hero{background:linear-gradient(180deg, rgba(11,91,215,0.08), transparent); padding:28px; border-radius:12px; text-align:left}
+.hero h1{font-size:28px; margin:0 0 8px}
+.hero p{margin:0 0 16px; color:var(--muted)}
+.hero-actions{display:flex; gap:12px; flex-wrap:wrap}
+.large{padding:14px 20px}
+.features{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:24px}
+.features article{background:var(--card); padding:16px; border-radius:10px; box-shadow:0 4px 14px rgba(2,6,23,0.06)}
+.service-item{background:var(--card); padding:16px; border-radius:10px; margin-bottom:16px; box-shadow:0 4px 14px rgba(2,6,23,0.06)}
+.how{margin-top:24px; background:var(--card); padding:16px; border-radius:10px}
+.site-footer{padding:18px 0; text-align:center; color:var(--muted)}
+.form-note .btn-primary{display:inline-block}
+@media(max-width:700px){
+  .header-inner{flex-direction:column; gap:12px}
+  .brand-name{font-size:16px}
+  .hero h1{font-size:22px}
+}
