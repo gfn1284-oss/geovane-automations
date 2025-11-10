@@ -1,0 +1,38 @@
+/* styles.css - layout responsivo */
+:root{
+  --bg1:#2b6cb0;--bg2:#6b46c1;--card-bg:rgba(255,255,255,0.04);
+  --accent:#ff7a00;--whatsapp:#25D366;--text:#f7f7f7;--muted:rgba(247,247,247,0.75);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color:var(--text);
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.card{
+  width:100%;max-width:920px;background:var(--card-bg);border-radius:16px;
+  padding:40px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.25);
+  border:2px solid rgba(255,255,255,0.06);
+}
+.logo{max-width:38%;margin:0 auto 18px;display:block}
+.slogan{font-size:1.25rem;margin:0 0 22px;color:var(--muted)}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  text-decoration:none;padding:12px 18px;border-radius:10px;font-weight:600;min-width:160px;
+  display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,0.18);
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{background:transparent;color:var(--text);border:2px solid rgba(255,255,255,0.08)}
+.whatsapp-fab{
+  position:fixed;right:20px;bottom:20px;width:62px;height:62px;border-radius:999px;
+  background:linear-gradient(180deg,var(--whatsapp),#1ea957);
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);z-index:9999;
+}
+.whatsapp-icon{width:30px;height:30px;fill:white}
+@media(max-width:640px){
+  .logo{max-width:56%}.card{padding:24px}.slogan{font-size:1rem}.btn{min-width:48%}
+}
